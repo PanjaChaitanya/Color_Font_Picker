@@ -1,0 +1,222 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    text-align: center;
+    position: sticky;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    top: 0px;
+}
+#logo{
+    position: absolute;
+    left: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    top: 15px;
+    z-index: 100;
+    font-family:palatino Linotype
+}
+#logo::before{
+    content: '';
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    z-index: -5;
+    left: -10px;
+    background-color: #1100ff;
+    border-radius: 40%;
+    transform: skewY(0deg);
+}
+#logo::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: -100%;
+    width: 25%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(252, 252, 252, 0) 0%, rgba(255, 255, 255, 0.795) 50%, rgba(255, 255, 255, 0) 100%);
+    transform: skewX(-30deg);
+    animation: shine 1s infinite;
+}
+@keyframes shine {
+    0% {
+        left: -20%;
+        height: 35%;
+    }
+    50%{
+        height: 120%;
+        top: 0px;
+    }
+    100% {
+        left: 95%;
+        height: 45%;
+        top: 10px;
+    }
+}
+#dwld{
+    padding: 5px 10px;
+    width: 100px;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+    display: block;
+    font-family:serif;
+    font-weight: bold;
+    
+}
+.container {
+    max-width: 95%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.textContainer {
+    text-align: center;
+    align-content: center;
+    min-height: 150px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+.colorPicker,.font-SizeContainer{
+    display: flex;
+    margin: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 9px black;
+}
+.bgColorPicker,.textColorPicker,
+.fontContainer,.fontSizeContainer{
+    border-radius: 20px;
+    background-color: white;
+    margin: 20px;
+    box-shadow: 0 0 9px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+}
+button {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+}
+button:hover {
+    transform: scale(1.1);
+}
+button.btnRed { background-color: red; }
+button#btnBlue { background-color: blue; }
+button#btnYellow { background-color: yellow; }
+button#btnGreen { background-color: green; }
+button#btnPurple { background-color: purple; }
+button#btnOrange { background-color: orange; }
+button#btnPink { background-color: pink; }
+button#btnBrown { background-color: brown; }
+button#btnCyan { background-color: cyan; }
+button#btnMagenta { background-color: magenta; }
+button#btnTeal { background-color: teal; }
+button#btnLime { background-color: lime; }
+button#btnIndigo { background-color: indigo; }
+button#btnOlive { background-color: olive; }
+button#btnMaroon { background-color: maroon; }
+button#btnGold { background-color: gold; }
+button#btnSilver { background-color: silver; }
+button#btnNavy { background-color: navy; }
+button#btnTurquoise { background-color: turquoise; }
+button#btnViolet { background-color: violet; }
+button#btnCrimson { background-color: crimson; }
+button#btnLavender { background-color: lavender; }
+button#btnBeige { background-color: beige; }
+button#btnCoral { background-color: coral; }
+button#btnSalmon { background-color: salmon; }
+button#btnOrchid { background-color: orchid; }
+button#btnKhaki { background-color: khaki; }
+button#btnChocolate { background-color: chocolate; }
+button#btnPlum { background-color: plum; }
+button#btnPeachPuff { background-color: peachpuff; }
+.fontContainer button {
+    width: auto;
+    height: auto;
+    background-color: #f9f9f9;
+    color: #333;
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.fontContainer button:hover {
+    background-color: #333;
+    color: white;
+    transform: scale(1.1);
+}
+.fontArial { font-family: Arial, sans-serif; }
+.fontTimesNewRoman { font-family: "Times New Roman", serif; }
+.fontGeorgia { font-family: Georgia, serif; }
+.fontCourierNew { font-family: "Courier New", monospace; }
+.fontVerdana { font-family: Verdana, sans-serif; }
+.fontTahoma { font-family: Tahoma, sans-serif; }
+.fontTrebuchetMS { font-family: "Trebuchet MS", sans-serif; }
+.fontImpact { font-family: Impact, sans-serif; }
+.fontComicSans { font-family: "Comic Sans MS", cursive, sans-serif; }
+.fontPalatino { font-family: "Palatino Linotype", serif; }
+.fontGaramond { font-family: Garamond, serif; }
+.fontHelvetica { font-family: Helvetica, sans-serif; }
+.fontRoboto { font-family: Roboto, sans-serif; }
+.fontOpenSans { font-family: "Open Sans", sans-serif; }
+.fontLato { font-family: Lato, sans-serif; }
+.fontMontserrat { font-family: Montserrat, sans-serif; }
+.fontPoppins { font-family: Poppins, sans-serif; }
+.fontUbuntu { font-family: Ubuntu, sans-serif; }
+.fontOswald { font-family: Oswald, sans-serif; }
+.fontRaleway { font-family: Raleway, sans-serif; }
+.fontSizeContainer button {
+    width: auto;
+    height: auto;
+    background-color: #f0f0f0;
+    color: #333;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.fontSizeContainer button:hover {
+    background-color: #333;
+    color: white;
+    transform: scale(1.1);
+}
+h2{
+    margin: 10px 0;
+    font-size: 20px;
+    text-align: center;
+    font-family: comic sans ms;
+    color: #333;
+}
+.textColorTitleRed::first-letter{
+    color: rgb(255, 0, 0);
+    font-size: 30px;
+}
+.textColorTitleBlue::first-letter{
+    color: blue;
+    font-size: 26px;
+}

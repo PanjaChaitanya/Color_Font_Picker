@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color and Font Picker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body> 
+    <header id="header">
+        <span id="logo">CHAITANYA</span> Color - Font Picker 
+    </header>
+    <div class="container">
+        <div class="textContainer" contenteditable="true">
+        </div>
+        <button onclick="DownloadPic()" id="dwld">Download</button>
+        <div class="colorPicker">
+            <div class="textColorPicker">
+                <h2 class="textColorTitleRed">Text <span class="textColorTitleBlue">C</span>olor</h2>
+                <button onclick="textColor('red')" class="btnRed"></button>
+                <button onclick="textColor('blue')" id="btnBlue"></button>
+                <button onclick="textColor('yellow')" id="btnYellow"></button>
+                <button onclick="textColor('green')" id="btnGreen"></button>
+                <button onclick="textColor('purple')" id="btnPurple"></button>
+                <button onclick="textColor('orange')" id="btnOrange"></button>
+                <button onclick="textColor('pink')" id="btnPink"></button>
+                <button onclick="textColor('brown')" id="btnBrown"></button>
+                <button onclick="textColor('cyan')" id="btnCyan"></button>
+                <button onclick="textColor('magenta')" id="btnMagenta"></button>
+                <button onclick="textColor('teal')" id="btnTeal"></button>
+                <button onclick="textColor('lime')" id="btnLime"></button>
+                <button onclick="textColor('indigo')" id="btnIndigo"></button>
+                <button onclick="textColor('olive')" id="btnOlive"></button>
+                <button onclick="textColor('maroon')" id="btnMaroon"></button>
+                <button onclick="textColor('gold')" id="btnGold"></button>
+                <button onclick="textColor('silver')" id="btnSilver"></button>
+                <button onclick="textColor('navy')" id="btnNavy"></button>
+                <button onclick="textColor('turquoise')" id="btnTurquoise"></button>
+                <button onclick="textColor('violet')" id="btnViolet"></button>
+                <button onclick="textColor('crimson')" id="btnCrimson"></button>
+                <button onclick="textColor('lavender')" id="btnLavender"></button>
+                <button onclick="textColor('beige')" id="btnBeige"></button>
+                <button onclick="textColor('coral')" id="btnCoral"></button>
+                <button onclick="textColor('salmon')" id="btnSalmon"></button>
+                <button onclick="textColor('orchid')" id="btnOrchid"></button>
+                <button onclick="textColor('khaki')" id="btnKhaki"></button>
+                <button onclick="textColor('chocolate')" id="btnChocolate"></button>
+                <button onclick="textColor('plum')" id="btnPlum"></button>
+                <button onclick="textColor('peachpuff')" id="btnPeachPuff"></button>
+            </div>
+            <div class="bgColorPicker">
+                <h2 class="textColorTitleRed">Background Color</h2>
+                <button onclick="bckColor('red')" class="btnRed"></button>
+                <button onclick="bckColor('blue')" id="btnBlue"></button>
+                <button onclick="bckColor('yellow')" id="btnYellow"></button>
+                <button onclick="bckColor('green')" id="btnGreen"></button>
+                <button onclick="bckColor('purple')" id="btnPurple"></button>
+                <button onclick="bckColor('orange')" id="btnOrange"></button>
+                <button onclick="bckColor('pink')" id="btnPink"></button>
+                <button onclick="bckColor('brown')" id="btnBrown"></button>
+                <button onclick="bckColor('cyan')" id="btnCyan"></button>
+                <button onclick="bckColor('magenta')" id="btnMagenta"></button>
+                <button onclick="bckColor('teal')" id="btnTeal"></button>
+                <button onclick="bckColor('lime')" id="btnLime"></button>
+                <button onclick="bckColor('indigo')" id="btnIndigo"></button>
+                <button onclick="bckColor('olive')" id="btnOlive"></button>
+                <button onclick="bckColor('maroon')" id="btnMaroon"></button>
+                <button onclick="bckColor('gold')" id="btnGold"></button>
+                <button onclick="bckColor('silver')" id="btnSilver"></button>
+                <button onclick="bckColor('navy')" id="btnNavy"></button>
+                <button onclick="bckColor('turquoise')" id="btnTurquoise"></button>
+                <button onclick="bckColor('violet')" id="btnViolet"></button>
+                <button onclick="bckColor('crimson')" id="btnCrimson"></button>
+                <button onclick="bckColor('lavender')" id="btnLavender"></button>
+                <button onclick="bckColor('beige')" id="btnBeige"></button>
+                <button onclick="bckColor('coral')" id="btnCoral"></button>
+                <button onclick="bckColor('salmon')" id="btnSalmon"></button>
+                <button onclick="bckColor('orchid')" id="btnOrchid"></button>
+                <button onclick="bckColor('khaki')" id="btnKhaki"></button>
+                <button onclick="bckColor('chocolate')" id="btnChocolate"></button>
+                <button onclick="bckColor('plum')" id="btnPlum"></button>
+                <button onclick="bckColor('peachpuff')" id="btnPeachPuff"></button>
+            </div>
+        </div>
+        <div class="font-SizeContainer">
+        <div class="fontContainer">
+            <h2 class="textColorTitleRed">Font Family</h2>
+            <button onclick="textFontFamily('Arial')" class="fontArial">Arial</button>
+            <button onclick="textFontFamily('Times New Roman')" class="fontTimesNewRoman">Times New Roman</button>
+            <button onclick="textFontFamily('Georgia')" class="fontGeorgia">Georgia</button>
+            <button onclick="textFontFamily('Courier New')" class="fontCourierNew">Courier New</button>
+            <button onclick="textFontFamily('Verdana')" class="fontVerdana">Verdana</button>
+            <button onclick="textFontFamily('Tahoma')" class="fontTahoma">Tahoma</button>
+            <button onclick="textFontFamily('Trebuchet MS')" class="fontTrebuchetMS">Trebuchet MS</button>
+            <button onclick="textFontFamily('Impact')" class="fontImpact">Impact</button>
+            <button onclick="textFontFamily('Comic Sans MS')" class="fontComicSans">Comic Sans MS</button>
+            <button onclick="textFontFamily('Palatino Linotype')" class="fontPalatino">Palatino Linotype</button>
+            <button onclick="textFontFamily('Garamond')" class="fontGaramond">Garamond</button>
+            <button onclick="textFontFamily('Helvetica')" class="fontHelvetica">Helvetica</button>
+            <button onclick="textFontFamily('Roboto')" class="fontRoboto">Roboto</button>
+            <button onclick="textFontFamily('Open Sans')" class="fontOpenSans">Open Sans</button>
+            <button onclick="textFontFamily('Lato')" class="fontLato">Lato</button>
+            <button onclick="textFontFamily('Montserrat')" class="fontMontserrat">Montserrat</button>
+            <button onclick="textFontFamily('Poppins')" class="fontPoppins">Poppins</button>
+            <button onclick="textFontFamily('Ubuntu')" class="fontUbuntu">Ubuntu</button>
+            <button onclick="textFontFamily('Oswald')" class="fontOswald">Oswald</button>
+            <button onclick="textFontFamily('Raleway')" class="fontRaleway">Raleway</button>
+        </div>
+        <div class="fontSizeContainer">
+            <h2 class="textColorTitleRed">Font Size</h2>
+            <button onclick="textFontSize(10)">10px</button>
+            <button onclick="textFontSize(12)">12px</button>
+            <button onclick="textFontSize(14)">14px</button>
+            <button onclick="textFontSize(16)">16px</button>
+            <button onclick="textFontSize(18)">18px</button>
+            <button onclick="textFontSize(20)">20px</button>
+            <button onclick="textFontSize(22)">22px</button>
+            <button onclick="textFontSize(24)">24px</button>
+            <button onclick="textFontSize(26)">26px</button>
+            <button onclick="textFontSize(28)">28px</button>
+            <button onclick="textFontSize(30)">30px</button>
+            <button onclick="textFontSize(32)">32px</button>
+            <button onclick="textFontSize(34)">34px</button>
+            <button onclick="textFontSize(36)">36px</button>
+            <button onclick="textFontSize(38)">38px</button>
+            <button onclick="textFontSize(40)">40px</button>
+            <button onclick="textFontSize(42)">42px</button>
+            <button onclick="textFontSize(44)">44px</button>
+            <button onclick="textFontSize(46)">46px</button>
+            <button onclick="textFontSize(48)">48px</button>
+            <button onclick="textFontSize(50)">50px</button>
+        </div>
+        </div>
+                
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
