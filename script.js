@@ -11,11 +11,13 @@ let textFontFamily = (fontName) =>{
     document.querySelector('.textContainer').style.fontFamily = fontName;
 }
 let DownloadPic=()=>{
-    html2canvas(document.querySelector('.textContainer')).then(canvas=>{
+    let textContainer = document.querySelector('.textContainer');
+    let c = textContainer.textContent.trim()
+    console.log(c)
+    html2canvas(textContainer).then(canvas=>{
         const link = document.createElement('a')
         link.href = canvas.toDataURL()
         link.download = 'image.png'
-        console.log("hello")
         link.click()
-    }
-)}
+        })
+}

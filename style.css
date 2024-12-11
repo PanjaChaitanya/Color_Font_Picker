@@ -18,11 +18,10 @@ header {
 #logo{
     position: absolute;
     left: 20px;
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 18px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
     top: 15px;
     z-index: 100;
-    font-family:palatino Linotype
 }
 #logo::before{
     content: '';
@@ -31,8 +30,8 @@ header {
     height: 120%;
     z-index: -5;
     left: -10px;
-    background-color: #1100ff;
-    border-radius: 40%;
+    background-color: #0084ff;
+    border-radius: 5px;
     transform: skewY(0deg);
 }
 #logo::after {
@@ -61,16 +60,23 @@ header {
         top: 10px;
     }
 }
+
 #dwld{
-    padding: 5px 10px;
-    width: 100px;
+    padding: 5px 25px;
+    width: auto;
+    background-color: rgb(0, 132, 255);
     text-align: center;
+    border-radius: 5%;
+    color: white;
     align-items: center;
     margin: auto;
     display: block;
-    font-family:serif;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
-    
+    text-transform: uppercase;
+}
+#dwld:hover{
+    background-color: rgb(25, 104, 194);
 }
 .container {
     max-width: 95%;
