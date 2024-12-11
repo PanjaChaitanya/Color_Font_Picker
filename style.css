@@ -60,7 +60,11 @@ header {
         top: 10px;
     }
 }
-
+#error{
+    color: red;
+    font-weight: bold;
+    text-align: center;
+}
 #dwld{
     padding: 5px 25px;
     width: auto;
